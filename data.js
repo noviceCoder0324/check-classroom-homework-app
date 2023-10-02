@@ -160,3 +160,27 @@ function reset() {
   
   localStorage.setItem('local', JSON.stringify(students));
 }
+
+function setChinese() {
+  for(let i = 0; i < students.length; i++) {
+    let std = students[i];
+    std.chn = true;
+
+    let chbtn = document.getElementById('chbtn' + i);
+    chbtn.style.backgroundColor = 'lightgreen';
+  }
+  
+  localStorage.setItem('local', JSON.stringify(students));
+}
+
+function setMath() {
+  for(let i = 0; i < students.length; i++) {
+    let std = students[i];
+    std.mth = false;
+
+    let mathbutton = document.getElementById('mthbtn' + i);
+    mathbutton.style.backgroundColor = 'lightgreen';
+  }
+  
+  localStorage.setItem('local', JSON.stringify(students));
+}
